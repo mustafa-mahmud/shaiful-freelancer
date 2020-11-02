@@ -1,0 +1,53 @@
+@media (max-width: 320px) {
+  /* 0 to 320px ..... small */
+}
+@media (min-width: 321px) {
+  /* 321px to 575px ..... xs */
+}
+@media (min-width: 576px) {
+  /* 576px to next @media ..... sm */
+}
+@media (min-width: 768px) {
+  /* 768px to next @media ..... md */
+}
+@media (min-width: 992px) {
+  /* 992px to next @media ...... lg */
+}
+@media (max-width: 1200px) {
+  /* 1200px to next @media ...... xl */
+  .marketPlace {
+    display: block !important;
+  }
+}
+@media (min-width: 1300px) {
+}
+@media (min-width: 1400px) {
+}
+@media (min-width: 1500px) {
+}
+@media (min-width: 1600px) {
+}
+@media (min-width: 1700px) {
+}
+@media (min-width: 1800px) {
+}
+@media (min-width: 1900px) {
+}
+@media (min-width: 2000px) {
+}
+@media (min-width: 2100px) {
+}
+@media (min-width: 2200px) {
+}
+@media (min-width: 2300px) {
+}
+@media (min-width: 2400px) {
+}
+@media (min-width: 2500px) {
+}
+@media (min-width: 2600px) {
+}
+@media (min-width: 2700px) {
+}
+@media (min-width: 2800px) {
+}

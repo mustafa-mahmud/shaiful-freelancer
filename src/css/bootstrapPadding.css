@@ -1,0 +1,643 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 3, 2018, 12:13:55 PM
+    Author     : mithu
+*/
+
+.no-gutters {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    padding-left:0 !important;
+    padding-right:0 !important;
+}
+
+/*========BOOTSTRAP PADDING=====*/
+/*Padding for all*/
+.p-6{
+    padding: 6rem !important;
+}
+.p-7{
+    padding: 7rem !important;
+}
+.p-8{
+    padding: 8rem !important;
+}
+.p-9{
+    padding: 9rem !important;
+}
+.p-10{
+    padding: 10rem !important;
+}
+/*Padding Top*/
+.pt-6{
+    padding-top: 6rem !important;
+}
+.pt-7{
+    padding-top: 7rem !important;
+}
+.pt-8{
+    padding-top: 8rem !important;
+}
+.pt-9{
+    padding-top: 9rem !important;
+}
+.pt-10{
+    padding-top: 10rem !important;
+}
+/*Padding Bottom*/
+.pb-6{
+    padding-bottom: 6rem !important;
+}
+.pb-7{
+    padding-bottom: 7rem !important;
+}
+.pb-8{
+    padding-bottom: 8rem !important;
+}
+.pb-9{
+    padding-bottom: 9rem !important;
+}
+.pb-10{
+    padding-bottom: 10rem !important;
+}
+/*Padding Right*/
+.pr-6{
+    padding-right: 6rem !important;
+}
+.pr-7{
+    padding-right: 7rem !important;
+}
+.pr-8{
+    padding-right: 8rem !important;
+}
+.pr-9{
+    padding-right: 9rem !important;
+}
+.pr-10{
+    padding-right: 10rem !important;
+}
+/*Padding Left*/
+.pl-6{
+    padding-left: 6rem !important;
+}
+.pl-7{
+    padding-left: 7rem !important;
+}
+.pl-8{
+    padding-left: 8rem !important;
+}
+.pl-9{
+    padding-left: 9rem !important;
+}
+.pl-10{
+    padding-left: 10rem !important;
+}
+/*Padding Horizontal (left & right)*/
+.px-6{
+    padding-left: 6rem !important;
+    padding-right: 6rem !important;
+}
+.px-7{
+    padding-left: 7rem !important;
+    padding-right: 7rem !important;
+}
+.px-8{
+    padding-left: 8rem !important;
+    padding-right: 8rem !important;
+}
+.px-9{
+    padding-left: 9rem !important;
+    padding-right: 9rem !important;
+}
+.px-10{
+    padding-left: 9rem !important;
+    padding-right: 9rem !important;
+}
+/*Padding Vertical (top & bottom)*/
+.py-6{
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
+}
+.py-7{
+    padding-top: 7rem !important;
+    padding-bottom: 7rem !important;
+}
+.py-8{
+    padding-top: 8rem !important;
+    padding-bottom: 8rem !important;
+}
+.py-9{
+    padding-top: 9rem !important;
+    padding-bottom: 9rem !important;
+}
+.py-10{
+    padding-top: 10rem !important;
+    padding-bottom: 10rem !important;
+}
+
+@media (max-width: 575px){/* 0 to 575 .... xs */
+
+}
+@media (min-width: 576px){/* 576 to next @media .... sm */
+    /*Padding for all*/
+    .p-sm-6{
+        padding: 6rem !important;
+    }
+    .p-sm-7{
+        padding: 7rem !important;
+    }
+    .p-sm-8{
+        padding: 8rem !important;
+    }
+    .p-sm-9{
+        padding: 9rem !important;
+    }
+    .p-sm-10{
+        padding: 10rem !important;
+    }
+    /*Padding Top*/
+    .pt-sm-6{
+        padding-top: 6rem !important;
+    }
+    .pt-sm-7{
+        padding-top: 7rem !important;
+    }
+    .pt-sm-8{
+        padding-top: 8rem !important;
+    }
+    .pt-sm-9{
+        padding-top: 9rem !important;
+    }
+    .pt-sm-10{
+        padding-top: 10rem !important;
+    }
+    /*Padding Bottom*/
+    .pb-sm-6{
+        padding-bottom: 6rem !important;
+    }
+    .pb-sm-7{
+        padding-bottom: 7rem !important;
+    }
+    .pb-sm-8{
+        padding-bottom: 8rem !important;
+    }
+    .pb-sm-9{
+        padding-bottom: 9rem !important;
+    }
+    .pb-sm-10{
+        padding-bottom: 10rem !important;
+    }
+    /*Padding Right*/
+    .pr-sm-6{
+        padding-right: 6rem !important;
+    }
+    .pr-sm-7{
+        padding-right: 7rem !important;
+    }
+    .pr-sm-8{
+        padding-right: 8rem !important;
+    }
+    .pr-sm-9{
+        padding-right: 9rem !important;
+    }
+    .pr-sm-10{
+        padding-right: 10rem !important;
+    }
+    /*Padding Left*/
+    .pl-sm-6{
+        padding-left: 6rem !important;
+    }
+    .pl-sm-7{
+        padding-left: 7rem !important;
+    }
+    .pl-sm-8{
+        padding-left: 8rem !important;
+    }
+    .pl-sm-9{
+        padding-left: 9rem !important;
+    }
+    .pl-sm-10{
+        padding-left: 10rem !important;
+    }
+    /*Padding Horizontal (left & right)*/
+    .px-sm-6{
+        padding-left: 6rem !important;
+        padding-right: 6rem !important;
+    }
+    .px-sm-7{
+        padding-left: 7rem !important;
+        padding-right: 7rem !important;
+    }
+    .px-sm-8{
+        padding-left: 8rem !important;
+        padding-right: 8rem !important;
+    }
+    .px-sm-9{
+        padding-left: 9rem !important;
+        padding-right: 9rem !important;
+    }
+    .px-sm-10{
+        padding-left: 9rem !important;
+        padding-right: 9rem !important;
+    }
+    /*Padding Vertical (top & bottom)*/
+    .py-sm-6{
+        padding-top: 6rem !important;
+        padding-bottom: 6rem !important;
+    }
+    .py-sm-7{
+        padding-top: 7rem !important;
+        padding-bottom: 7rem !important;
+    }
+    .py-sm-8{
+        padding-top: 8rem !important;
+        padding-bottom: 8rem !important;
+    }
+    .py-sm-9{
+        padding-top: 9rem !important;
+        padding-bottom: 9rem !important;
+    }
+    .py-sm-10{
+        padding-top: 10rem !important;
+        padding-bottom: 10rem !important;
+    }
+}
+@media (min-width: 768px){/* 768 to next @media .... md*/
+    /*Padding for all*/
+    .p-md-6{
+        padding: 6rem !important;
+    }
+    .p-md-7{
+        padding: 7rem !important;
+    }
+    .p-md-8{
+        padding: 8rem !important;
+    }
+    .p-md-9{
+        padding: 9rem !important;
+    }
+    .p-md-10{
+        padding: 10rem !important;
+    }
+    /*Padding Top*/
+    .pt-md-6{
+        padding-top: 6rem !important;
+    }
+    .pt-md-7{
+        padding-top: 7rem !important;
+    }
+    .pt-md-8{
+        padding-top: 8rem !important;
+    }
+    .pt-md-9{
+        padding-top: 9rem !important;
+    }
+    .pt-md-10{
+        padding-top: 10rem !important;
+    }
+    /*Padding Bottom*/
+    .pb-md-6{
+        padding-bottom: 6rem !important;
+    }
+    .pb-md-7{
+        padding-bottom: 7rem !important;
+    }
+    .pb-md-8{
+        padding-bottom: 8rem !important;
+    }
+    .pb-md-9{
+        padding-bottom: 9rem !important;
+    }
+    .pb-md-10{
+        padding-bottom: 10rem !important;
+    }
+    /*Padding Right*/
+    .pr-md-6{
+        padding-right: 6rem !important;
+    }
+    .pr-md-7{
+        padding-right: 7rem !important;
+    }
+    .pr-md-8{
+        padding-right: 8rem !important;
+    }
+    .pr-md-9{
+        padding-right: 9rem !important;
+    }
+    .pr-md-10{
+        padding-right: 10rem !important;
+    }
+    /*Padding Left*/
+    .pl-md-6{
+        padding-left: 6rem !important;
+    }
+    .pl-md-7{
+        padding-left: 7rem !important;
+    }
+    .pl-md-8{
+        padding-left: 8rem !important;
+    }
+    .pl-md-9{
+        padding-left: 9rem !important;
+    }
+    .pl-md-10{
+        padding-left: 10rem !important;
+    }
+    /*Padding Horizontal (left & right)*/
+    .px-md-6{
+        padding-left: 6rem !important;
+        padding-right: 6rem !important;
+    }
+    .px-md-7{
+        padding-left: 7rem !important;
+        padding-right: 7rem !important;
+    }
+    .px-md-8{
+        padding-left: 8rem !important;
+        padding-right: 8rem !important;
+    }
+    .px-md-9{
+        padding-left: 9rem !important;
+        padding-right: 9rem !important;
+    }
+    .px-md-10{
+        padding-left: 9rem !important;
+        padding-right: 9rem !important;
+    }
+    /*Padding Vertical (top & bottom)*/
+    .py-md-6{
+        padding-top: 6rem !important;
+        padding-bottom: 6rem !important;
+    }
+    .py-md-7{
+        padding-top: 7rem !important;
+        padding-bottom: 7rem !important;
+    }
+    .py-md-8{
+        padding-top: 8rem !important;
+        padding-bottom: 8rem !important;
+    }
+    .py-md-9{
+        padding-top: 9rem !important;
+        padding-bottom: 9rem !important;
+    }
+    .py-md-10{
+        padding-top: 10rem !important;
+        padding-bottom: 10rem !important;
+    }
+
+}
+@media (min-width: 992px){/* 992 to next @media .... lg */
+    /*========BOOTSTRAP PADDING=====*/
+    /*Padding for all*/
+    .p-lg-6{
+        padding: 6rem !important;
+    }
+    .p-lg-7{
+        padding: 7rem !important;
+    }
+    .p-lg-8{
+        padding: 8rem !important;
+    }
+    .p-lg-9{
+        padding: 9rem !important;
+    }
+    .p-lg-10{
+        padding: 10rem !important;
+    }
+    /*Padding Top*/
+    .pt-lg-6{
+        padding-top: 6rem !important;
+    }
+    .pt-lg-7{
+        padding-top: 7rem !important;
+    }
+    .pt-lg-8{
+        padding-top: 8rem !important;
+    }
+    .pt-lg-9{
+        padding-top: 9rem !important;
+    }
+    .pt-lg-10{
+        padding-top: 10rem !important;
+    }
+    /*Padding Bottom*/
+    .pb-lg-6{
+        padding-bottom: 6rem !important;
+    }
+    .pb-lg-7{
+        padding-bottom: 7rem !important;
+    }
+    .pb-lg-8{
+        padding-bottom: 8rem !important;
+    }
+    .pb-lg-9{
+        padding-bottom: 9rem !important;
+    }
+    .pb-lg-10{
+        padding-bottom: 10rem !important;
+    }
+    /*Padding Right*/
+    .pr-lg-6{
+        padding-right: 6rem !important;
+    }
+    .pr-lg-7{
+        padding-right: 7rem !important;
+    }
+    .pr-lg-8{
+        padding-right: 8rem !important;
+    }
+    .pr-lg-9{
+        padding-right: 9rem !important;
+    }
+    .pr-lg-10{
+        padding-right: 10rem !important;
+    }
+    /*Padding Left*/
+    .pl-lg-6{
+        padding-left: 6rem !important;
+    }
+    .pl-lg-7{
+        padding-left: 7rem !important;
+    }
+    .pl-lg-8{
+        padding-left: 8rem !important;
+    }
+    .pl-lg-9{
+        padding-left: 9rem !important;
+    }
+    .pl-lg-10{
+        padding-left: 10rem !important;
+    }
+    /*Padding Horizontal (left & right)*/
+    .px-lg-6{
+        padding-left: 6rem !important;
+        padding-right: 6rem !important;
+    }
+    .px-lg-7{
+        padding-left: 7rem !important;
+        padding-right: 7rem !important;
+    }
+    .px-lg-8{
+        padding-left: 8rem !important;
+        padding-right: 8rem !important;
+    }
+    .px-lg-9{
+        padding-left: 9rem !important;
+        padding-right: 9rem !important;
+    }
+    .px-lg-10{
+        padding-left: 9rem !important;
+        padding-right: 9rem !important;
+    }
+    /*Padding Vertical (top & bottom)*/
+    .py-lg-6{
+        padding-top: 6rem !important;
+        padding-bottom: 6rem !important;
+    }
+    .py-lg-7{
+        padding-top: 7rem !important;
+        padding-bottom: 7rem !important;
+    }
+    .py-lg-8{
+        padding-top: 8rem !important;
+        padding-bottom: 8rem !important;
+    }
+    .py-lg-9{
+        padding-top: 9rem !important;
+        padding-bottom: 9rem !important;
+    }
+    .py-lg-10{
+        padding-top: 10rem !important;
+        padding-bottom: 10rem !important;
+    }
+}
+@media (min-width: 1200px){/* 1200 to next @media .... xl*/
+    /*Padding for all*/
+    .p-xl-6{
+        padding: 6rem !important;
+    }
+    .p-xl-7{
+        padding: 7rem !important;
+    }
+    .p-xl-8{
+        padding: 8rem !important;
+    }
+    .p-xl-9{
+        padding: 9rem !important;
+    }
+    .p-xl-10{
+        padding: 10rem !important;
+    }
+    /*Padding Top*/
+    .pt-xl-6{
+        padding-top: 6rem !important;
+    }
+    .pt-xl-7{
+        padding-top: 7rem !important;
+    }
+    .pt-xl-8{
+        padding-top: 8rem !important;
+    }
+    .pt-xl-9{
+        padding-top: 9rem !important;
+    }
+    .pt-xl-10{
+        padding-top: 10rem !important;
+    }
+    /*Padding Bottom*/
+    .pb-xl-6{
+        padding-bottom: 6rem !important;
+    }
+    .pb-xl-7{
+        padding-bottom: 7rem !important;
+    }
+    .pb-xl-8{
+        padding-bottom: 8rem !important;
+    }
+    .pb-xl-9{
+        padding-bottom: 9rem !important;
+    }
+    .pb-xl-10{
+        padding-bottom: 10rem !important;
+    }
+    /*Padding Right*/
+    .pr-xl-6{
+        padding-right: 6rem !important;
+    }
+    .pr-xl-7{
+        padding-right: 7rem !important;
+    }
+    .pr-xl-8{
+        padding-right: 8rem !important;
+    }
+    .pr-xl-9{
+        padding-right: 9rem !important;
+    }
+    .pr-xl-10{
+        padding-right: 10rem !important;
+    }
+    /*Padding Left*/
+    .pl-xl-6{
+        padding-left: 6rem !important;
+    }
+    .pl-xl-7{
+        padding-left: 7rem !important;
+    }
+    .pl-xl-8{
+        padding-left: 8rem !important;
+    }
+    .pl-xl-9{
+        padding-left: 9rem !important;
+    }
+    .pl-xl-10{
+        padding-left: 10rem !important;
+    }
+    /*Padding Horizontal (left & right)*/
+    .px-xl-6{
+        padding-left: 6rem !important;
+        padding-right: 6rem !important;
+    }
+    .px-xl-7{
+        padding-left: 7rem !important;
+        padding-right: 7rem !important;
+    }
+    .px-xl-8{
+        padding-left: 8rem !important;
+        padding-right: 8rem !important;
+    }
+    .px-xl-9{
+        padding-left: 9rem !important;
+        padding-right: 9rem !important;
+    }
+    .px-xl-10{
+        padding-left: 9rem !important;
+        padding-right: 9rem !important;
+    }
+    /*Padding Vertical (top & bottom)*/
+    .py-xl-6{
+        padding-top: 6rem !important;
+        padding-bottom: 6rem !important;
+    }
+    .py-xl-7{
+        padding-top: 7rem !important;
+        padding-bottom: 7rem !important;
+    }
+    .py-xl-8{
+        padding-top: 8rem !important;
+        padding-bottom: 8rem !important;
+    }
+    .py-xl-9{
+        padding-top: 9rem !important;
+        padding-bottom: 9rem !important;
+    }
+    .py-xl-10{
+        padding-top: 10rem !important;
+        padding-bottom: 10rem !important;
+    }
+}
+

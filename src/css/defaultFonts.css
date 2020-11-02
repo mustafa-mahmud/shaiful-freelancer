@@ -1,0 +1,7 @@
+/* Default font-size*/
+body { font-size: 15px;}
+h1,h2,h3,h4,h5,h6,p {line-height: 1.45;}
+h1 {  font-size: 0.8em;}
+h2 {  font-size: 0.7em;}
+h3 { font-size: 0.6em; }            
+p,span,a,i{ font-size: 0.55em;}

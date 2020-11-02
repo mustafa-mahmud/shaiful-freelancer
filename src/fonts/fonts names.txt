@@ -1,0 +1,6 @@
+font-family: myriadpro-bold;
+font-family: myriad pro bold semiextended;
+font-family: myriadpro-blacksemicn;
+font-family: myriadpro-light;
+
+
