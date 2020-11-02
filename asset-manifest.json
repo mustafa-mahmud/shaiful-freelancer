@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/shaiful-freelancer/static/css/main.c097368b.chunk.css",
+    "main.js": "/shaiful-freelancer/static/js/main.f9ee1f9c.chunk.js",
+    "main.js.map": "/shaiful-freelancer/static/js/main.f9ee1f9c.chunk.js.map",
+    "runtime-main.js": "/shaiful-freelancer/static/js/runtime-main.43764c5d.js",
+    "runtime-main.js.map": "/shaiful-freelancer/static/js/runtime-main.43764c5d.js.map",
+    "static/js/2.95037fca.chunk.js": "/shaiful-freelancer/static/js/2.95037fca.chunk.js",
+    "static/js/2.95037fca.chunk.js.map": "/shaiful-freelancer/static/js/2.95037fca.chunk.js.map",
+    "index.html": "/shaiful-freelancer/index.html",
+    "precache-manifest.9c9912b4df7738182bf582cd4e465020.js": "/shaiful-freelancer/precache-manifest.9c9912b4df7738182bf582cd4e465020.js",
+    "service-worker.js": "/shaiful-freelancer/service-worker.js",
+    "static/css/main.c097368b.chunk.css.map": "/shaiful-freelancer/static/css/main.c097368b.chunk.css.map",
+    "static/js/2.95037fca.chunk.js.LICENSE.txt": "/shaiful-freelancer/static/js/2.95037fca.chunk.js.LICENSE.txt",
+    "static/media/style.css": "/shaiful-freelancer/static/media/x-cart.cd3ec3dc.png",
+    "static/media/comment.jpg": "/shaiful-freelancer/static/media/comment.a497d438.jpg",
+    "static/media/fiverr.svg": "/shaiful-freelancer/static/media/fiverr.230601ac.svg",
+    "static/media/freelancer.svg": "/shaiful-freelancer/static/media/freelancer.16effbf2.svg",
+    "static/media/main.jpg": "/shaiful-freelancer/static/media/main.ed92174c.jpg",
+    "static/media/upwork.svg": "/shaiful-freelancer/static/media/upwork.86b51468.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.43764c5d.js",
+    "static/js/2.95037fca.chunk.js",
+    "static/css/main.c097368b.chunk.css",
+    "static/js/main.f9ee1f9c.chunk.js"
+  ]
+}
