@@ -144,7 +144,7 @@ export default function Contact() {
                     Message sent!
                   </h3>
                   <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-                    Thank you for reaching out. I'll get back to you soon.
+                    Thank you for reaching out. I&apos;ll get back to you soon.
                   </p>
                 </div>
               </div>

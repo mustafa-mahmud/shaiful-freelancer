@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import Stats from "./components/Stats";
 import About from "./components/About";
 import Services from "./components/Services";
+import Snippet from "./components/Snippet";
 import Tools from "./components/Tools";
 import Strengths from "./components/Strengths";
 import Experience from "./components/Experience";
@@ -17,6 +18,7 @@ const SECTIONS = [
   "stats",
   "about",
   "services",
+  "snippet",
   "tools",
   "strengths",
   "experience",
@@ -54,6 +56,7 @@ export default function App() {
         <Stats />
         <About />
         <Services />
+        <Snippet />
         <Tools />
         <Strengths />
         <Experience />

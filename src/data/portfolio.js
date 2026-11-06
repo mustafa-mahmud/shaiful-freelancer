@@ -69,9 +69,99 @@ export const CONTACT = {
 export const NAV = [
   { label: 'Home', href: '#hero' },
   { label: 'Services', href: '#services' },
+  { label: 'Snippet', id: 'snippet', href: '#snippet' },
   { label: 'Experience', href: '#experience' },
   { label: 'Education', href: '#education' },
   { label: 'Contact', href: '#contact' },
+];
+
+export const snippetSection = {
+  eyebrow: 'Work Samples',
+  title: 'Snippet Work',
+  subtitle:
+    'A few samples of my work. Each link opens the sample in a new tab.',
+};
+
+export const snippets = [
+  {
+    id: 1,
+    title: 'Lead Generation',
+    category: 'Research & Leads',
+    url: 'https://docs.google.com/spreadsheets/d/10cfyKA1Thr7psIwG6uxVkaP7xH9I3HxfpF2eMu86Iik/edit#gid=472298824',
+  },
+  {
+    id: 2,
+    title: 'Email Collect',
+    category: 'Research & Leads',
+    url: 'https://docs.google.com/document/d/1YkyAe9P0bGpjd0WWdVrK7KACkaa_hPx4TytSHJKMHHw/edit',
+  },
+  {
+    id: 3,
+    title: 'Image Edit',
+    category: 'Creative',
+    url: 'https://docs.google.com/document/d/1EFg-5Oek5OJpXS49EqmAeJey-nSvj34_9qc9QMV3o88/edit',
+  },
+  {
+    id: 4,
+    title: 'Amazon Entry',
+    category: 'E-commerce',
+    url: 'https://docs.google.com/document/d/1p8ZEmkdRtLSQKasl0RF7ByP94kOxjaX4jJfCEWovh9k/edit',
+  },
+  {
+    id: 5,
+    title: 'eBay Entry',
+    category: 'E-commerce',
+    url: 'https://docs.google.com/document/d/1XIyeqJnSe7_lFe4nnAkX_zhWXEL94T15qTlF6ceSCmI/edit',
+  },
+  {
+    id: 6,
+    title: 'Etsy Entry',
+    category: 'E-commerce',
+    url: 'https://docs.google.com/document/d/1cdy6xj7s1N-9G-UGMM9MX1SU8ncCRW1jVU32mLkamwk/edit',
+  },
+  {
+    id: 7,
+    title: 'Shopify Entry',
+    category: 'E-commerce',
+    url: 'https://docs.google.com/document/d/16hjLlanNim2VhBZkLSq4cVWhhpqEvUL-DN24rqY5LPo/edit',
+  },
+  {
+    id: 8,
+    title: 'Shopify Oberlo',
+    category: 'E-commerce',
+    url: 'https://docs.google.com/document/d/1FoOGvSDHv32-63KimmCt5gY4lo4jD3AmxqTx0flZSjY/edit',
+  },
+  // TODO: confirm with client, WordPress and Property Listing share the same URL
+  {
+    id: 9,
+    title: 'WordPress Entry',
+    category: 'E-commerce',
+    url: 'https://docs.google.com/document/d/1B7tu1UCQPTOOrtKqLIX_t_r2ow0OVjb6_-6TE02MthY/edit',
+  },
+  {
+    id: 10,
+    title: 'X-Cart Entry',
+    category: 'E-commerce',
+    url: 'https://docs.google.com/document/d/13tErErUuwg7icD4w-obOHh4-ZFe5zcYaVuNlGUPz9Xc/edit',
+  },
+  {
+    id: 11,
+    title: 'Houzz Entry',
+    category: 'E-commerce',
+    url: 'https://docs.google.com/document/d/13Dix44aoehEkudJGjObJYa95zJ3aH2hDtp4IIuGyJ30/edit',
+  },
+  {
+    id: 12,
+    title: 'Craigslist Entry',
+    category: 'E-commerce',
+    url: 'https://docs.google.com/document/d/1wxu1aUnlOmTVW8yIDUaVPSAecU4pnypQKv5XkGJ_LCg/edit',
+  },
+  {
+    id: 13,
+    title: 'Property Listing',
+    category: 'E-commerce',
+    url: 'https://docs.google.com/document/d/1B7tu1UCQPTOOrtKqLIX_t_r2ow0OVjb6_-6TE02MthY/edit',
+  },
 ];
 
 export const STATS = [
