@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import { GraduationCap, Building2 } from "lucide-react";
+import { GraduationCap, Building2, School } from "lucide-react";
 import { EDUCATION } from "../data/portfolio";
 
-const ICONS = { GraduationCap, Building2 };
+const ICONS = { GraduationCap, Building2, School };
 
 export default function Education() {
   return (
@@ -18,7 +18,7 @@ export default function Education() {
         </div>
         <div className="grid md:grid-cols-3 gap-5 md:gap-6">
           {EDUCATION.map((edu, i) => {
-            const Icon = ICONS[Object.keys(ICONS)[i]];
+            const Icon = ICONS[Object.keys(ICONS)[i]] || GraduationCap;
             return (
               <motion.div
                 key={i}
