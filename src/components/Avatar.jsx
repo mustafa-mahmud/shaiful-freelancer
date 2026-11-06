@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import avatarImage from '../images/a.jpeg';
 
 export default function Avatar({
   src,
@@ -7,9 +8,7 @@ export default function Avatar({
   className = '',
 }) {
   const [fallback, setFallback] = useState(false);
-  const imageSrc =
-    src ||
-    'https://api.dicebear.com/7.x/avataaars/svg?seed=MShaiful&backgroundColor=b6e3f4&mood=happy';
+  const imageSrc = src || avatarImage;
 
   return (
     <span className={`relative inline-block ${className}`}>
