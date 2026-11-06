@@ -11,14 +11,16 @@ export default function Avatar({
   const imageSrc = src || avatarImage;
 
   return (
-    <span className={`relative inline-block ${className}`}>
+    <span
+      className={`relative inline-block overflow-hidden rounded-full ${className}`}
+    >
       {!fallback && (
         <img
           src={imageSrc}
           alt={alt}
           width={size}
           height={size}
-          className={`rounded-full block shadow-lg ${size >= 80 ? 'shadow-xl' : ''}`}
+          className={`rounded-full block shadow-lg ${size >= 80 ? 'shadow-xl' : ''} object-cover`}
           loading="eager"
           onError={() => setFallback(true)}
         />
