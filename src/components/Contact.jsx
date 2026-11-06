@@ -21,9 +21,9 @@ const ICONS = {
 };
 
 // .env file e ei 3 ta value rakho (Vite). Niche setup steps dekho.
-const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+const SERVICE_ID = 'service_5x7tfeh';
+const TEMPLATE_ID = 'template_c45icti';
+const PUBLIC_KEY = 'Dero2lnoAgrM9b0hT';
 
 export default function Contact() {
   const [submitting, setSubmitting] = useState(false);
