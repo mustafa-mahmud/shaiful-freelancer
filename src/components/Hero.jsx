@@ -47,41 +47,43 @@ export default function Hero() {
         <div className="order-1 lg:order-1">
           {/* Mobile e center, desktop e bam theke suru */}
           <div className="flex justify-center lg:justify-start lg:pl-6">
-            {/* inline-block => wrapper ta avatar er own size e shrink hobe,
-                tai glow bar ar full-width hobe na */}
-            <div className="relative inline-block">
-              {/* Glow bar: avatar er cheye only 10px boro + rounded-full
-                  (kom lagle -inset-[5px], beshi lagle -inset-[15px] koro) */}
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute -inset-[10px] rounded-full bg-gradient-to-r from-teal-500 to-indigo-600 opacity-30 blur animate-[pulse_4s_cubic-bezier(0.4,0,0.6,1)_infinite]"
-              ></div>
-              {/* relative => avatar glow er upore thakbe */}
-              <Avatar size={110} className="relative" />
-            </div>
-          </div>
+            {/* Avatar ar Upwork/Fiverr ekoi column e wrap kora —
+                tai badge gulo sob screen size e avatar er thik nicha thakbe */}
+            <div className="flex flex-col items-center gap-6 md:gap-10">
+              <div className="relative inline-block">
+                {/* Glow bar: avatar er cheye only 10px boro + rounded-full */}
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -inset-[10px] rounded-full bg-gradient-to-r from-teal-500 to-indigo-600 opacity-30 blur animate-[pulse_4s_cubic-bezier(0.4,0,0.6,1)_infinite]"
+                ></div>
+                {/* relative => avatar glow er upore thakbe */}
+                <Avatar size={110} className="relative" />
+              </div>
 
-          <div className="mt-6 md:mt-10 flex flex-wrap justify-center gap-3">
-            <Badge
-              href={CONTACT.upwork}
-              label="Upwork"
-              color="bg-green-500/10 text-green-600 dark:text-green-400 border-green-500/20"
-            />
-            <Badge
-              href={CONTACT.fiverr}
-              label="Fiverr"
-              color="bg-green-500/10 text-green-600 dark:text-green-400 border-green-500/20"
-            />
+              {/* Badges: sob somoy avatar er nicha center e */}
+              <div className="flex flex-wrap justify-center gap-3">
+                <Badge
+                  href={CONTACT.upwork}
+                  label="Upwork"
+                  color="bg-green-500/10 text-green-600 dark:text-green-400 border-green-500/20"
+                />
+                <Badge
+                  href={CONTACT.fiverr}
+                  label="Fiverr"
+                  color="bg-green-500/10 text-green-600 dark:text-green-400 border-green-500/20"
+                />
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Text Content: Mobile e niche (order-2), Desktop e dan pashe (order-2) */}
-        <div className="order-2 lg:order-2 space-y-6">
+        {/* Text Content: Mobile e center (avatar er moto), Desktop e left-aligned */}
+        <div className="order-2 lg:order-2 space-y-6 text-center lg:text-left">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex items-center gap-2"
+            className="flex items-center justify-center gap-2 lg:justify-start"
           >
             <span className="inline-flex items-center gap-1.5 rounded-full border border-teal-500/20 bg-teal-50/60 dark:bg-teal-900/30 px-3 py-1 text-xs font-semibold text-teal-600 dark:text-teal-400">
               <span
@@ -109,7 +111,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="h-8 md:h-10 overflow-hidden flex items-end"
+            className="h-8 md:h-10 overflow-hidden flex items-end justify-center lg:justify-start"
           >
             <span className="font-heading text-2xl md:text-3xl font-bold text-slate-500 dark:text-slate-300">
               {SITE.shortName}, the
@@ -123,7 +125,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
-            className="text-lg md:text-xl text-slate-600 dark:text-slate-400 text-balance max-w-xl leading-relaxed"
+            className="text-lg md:text-xl text-slate-600 dark:text-slate-400 text-balance max-w-xl mx-auto lg:mx-0 leading-relaxed"
           >
             {SITE.tagline}
           </motion.p>
@@ -132,7 +134,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="flex flex-wrap gap-4"
+            className="flex flex-wrap justify-center gap-4 lg:justify-start"
           >
             <a
               href={CONTACT.whatsapp.href}
@@ -161,7 +163,7 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          <div className="mt-6 flex flex-wrap justify-center gap-2 text-xs font-medium text-slate-500 dark:text-slate-500">
+          <div className="mt-6 flex flex-wrap justify-center gap-2 text-xs font-medium text-slate-500 dark:text-slate-500 lg:justify-start">
             {SITE.subRoles.map((role) => (
               <span
                 key={role}
