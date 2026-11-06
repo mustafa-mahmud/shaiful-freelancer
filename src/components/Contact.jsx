@@ -63,9 +63,11 @@ export default function Contact() {
       setSent(true);
       setTimeout(() => setSent(false), 6000);
     } catch (err) {
-      console.error('EmailJS error:', err);
+      console.error('EmailJS full error:', err);
       setError(
-        'Message could not be sent. Please try again or use another contact method.',
+        err.text
+          ? `EmailJS Error: ${err.text}`
+          : 'Message could not be sent. Please open Console (F12) to see details.',
       );
     } finally {
       setSubmitting(false);
