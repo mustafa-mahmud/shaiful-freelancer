@@ -45,10 +45,22 @@ export default function Hero() {
       <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         {/* Avatar + Badges: Mobile e upore (order-1), Desktop e bam pashe (order-1) */}
         <div className="order-1 lg:order-1">
-          <div className="relative">
-            <Avatar size={110} className="mx-auto lg:mx-none lg:ml-6" />
-            <div className="absolute -inset-1 bg-gradient-to-r from-teal-500 to-indigo-600 rounded-full blur opacity-30 animate-[pulse_4s_cubic-bezier(0.4,0,0.6,1)_infinite]"></div>
+          {/* Mobile e center, desktop e bam theke suru */}
+          <div className="flex justify-center lg:justify-start lg:pl-6">
+            {/* inline-block => wrapper ta avatar er own size e shrink hobe,
+                tai glow bar ar full-width hobe na */}
+            <div className="relative inline-block">
+              {/* Glow bar: avatar er cheye only 10px boro + rounded-full
+                  (kom lagle -inset-[5px], beshi lagle -inset-[15px] koro) */}
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute -inset-[10px] rounded-full bg-gradient-to-r from-teal-500 to-indigo-600 opacity-30 blur animate-[pulse_4s_cubic-bezier(0.4,0,0.6,1)_infinite]"
+              ></div>
+              {/* relative => avatar glow er upore thakbe */}
+              <Avatar size={110} className="relative" />
+            </div>
           </div>
+
           <div className="mt-6 md:mt-10 flex flex-wrap justify-center gap-3">
             <Badge
               href={CONTACT.upwork}
