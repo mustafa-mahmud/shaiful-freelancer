@@ -42,13 +42,12 @@ export default function Hero() {
       id="hero"
       className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32"
     >
-      <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-        {/* Avatar + Badges: Mobile e upore (order-1), Desktop e bam pashe (order-1) */}
-        <div className="order-1 lg:order-1">
-          {/* Mobile e center, desktop e bam theke suru */}
-          <div className="flex justify-center lg:justify-start lg:pl-6">
-            {/* Avatar ar Upwork/Fiverr ekoi column e wrap kora —
-                tai badge gulo sob screen size e avatar er thik nicha thakbe */}
+      {/* 12-col grid: avatar 5 col (kompact), text 7 col */}
+      <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        {/* Avatar + Badges: Mobile e upore-center, Desktop e bam pashe center */}
+        <div className="order-1 lg:order-1 lg:col-span-5">
+          {/* Sob screen e content center e — tai pashe khali jaiga symmetric lage */}
+          <div className="flex justify-center">
             <div className="flex flex-col items-center gap-6 md:gap-10">
               <div className="relative inline-block">
                 {/* Glow bar: avatar er cheye only 10px boro + rounded-full */}
@@ -56,11 +55,24 @@ export default function Hero() {
                   aria-hidden="true"
                   className="pointer-events-none absolute -inset-[10px] rounded-full bg-gradient-to-r from-teal-500 to-indigo-600 opacity-30 blur animate-[pulse_4s_cubic-bezier(0.4,0,0.6,1)_infinite]"
                 ></div>
-                {/* relative => avatar glow er upore thakbe */}
-                <Avatar size={110} className="relative" />
+
+                {/* Desktop e extra decoration: slowly ghora dashed ring —
+                    khali space ta ke designed feel dey */}
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -inset-8 rounded-full border-2 border-dashed border-teal-500/25 dark:border-teal-400/20 animate-[spin_30s_linear_infinite] hidden lg:block"
+                ></div>
+
+                {/* Mobile: 110px, Desktop: 200px — space er sathe balance */}
+                <div className="lg:hidden">
+                  <Avatar size={110} className="relative" />
+                </div>
+                <div className="hidden lg:block">
+                  <Avatar size={200} className="relative" />
+                </div>
               </div>
 
-              {/* Badges: sob somoy avatar er nicha center e */}
+              {/* Badges: sob somoy avatar er thik nicha center e */}
               <div className="flex flex-wrap justify-center gap-3">
                 <Badge
                   href={CONTACT.upwork}
@@ -77,8 +89,8 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Text Content: Mobile e center (avatar er moto), Desktop e left-aligned */}
-        <div className="order-2 lg:order-2 space-y-6 text-center lg:text-left">
+        {/* Text Content: Mobile e center, Desktop e left-aligned */}
+        <div className="order-2 lg:order-2 lg:col-span-7 space-y-6 text-center lg:text-left">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
