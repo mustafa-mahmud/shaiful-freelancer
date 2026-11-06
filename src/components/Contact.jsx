@@ -1,6 +1,15 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, Linkedin, Facebook, Globe } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+import {
+  Mail,
+  Phone,
+  Linkedin,
+  Facebook,
+  Globe,
+  CheckCircle2,
+  AlertCircle,
+} from 'lucide-react';
 import { CONTACT } from '../data/portfolio';
 
 const ICONS = {
@@ -11,9 +20,15 @@ const ICONS = {
   Globe,
 };
 
+// .env file e ei 3 ta value rakho (Vite). Niche setup steps dekho.
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
 export default function Contact() {
   const [submitting, setSubmitting] = useState(false);
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState('');
 
   const methods = [
     CONTACT.whatsapp,
@@ -23,28 +38,38 @@ export default function Contact() {
     CONTACT.vorsa,
   ];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    const form = e.currentTarget;
+
+    // Spam bot protection (honeypot): bot ei hidden field fill korbe
+    if (form.elements.website?.value) return;
+
+    if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
+      setError(
+        'Email service is not configured yet. Please contact me directly.',
+      );
+      return;
+    }
+
     setSubmitting(true);
-    const form = e.target;
-    const name = form.elements.name.value.trim();
-    const from = form.elements.email.value.trim();
-    const message = form.elements.message.value.trim();
-    const subject = encodeURIComponent(
-      `Portfolio Inquiry from ${name || 'a visitor'}`,
-    );
-    const body = encodeURIComponent(
-      `Name: ${name || 'Not provided'}\nEmail: ${
-        from || 'Not provided'
-      }\n\nMessage:\n${message}`,
-    );
-    const mailto = `mailto:${CONTACT.email.href.replace('mailto:', '')}?subject=${subject}&body=${body}`;
-    setTimeout(() => {
-      window.location.href = mailto;
-      setSubmitting(false);
+    setError('');
+
+    try {
+      await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form, {
+        publicKey: PUBLIC_KEY,
+      });
+      form.reset();
       setSent(true);
-      setTimeout(() => setSent(false), 5000);
-    }, 400);
+      setTimeout(() => setSent(false), 6000);
+    } catch (err) {
+      console.error('EmailJS error:', err);
+      setError(
+        'Message could not be sent. Please try again or use another contact method.',
+      );
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -52,13 +77,8 @@ export default function Contact() {
       id="contact"
       className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28"
     >
-      {/*
-        Layout:
-        - Choto screen (< lg): grid-cols-1 → methods upore, form niche (break)
-        - Boro screen (>= lg): 12-col grid → methods (5 col) + form (7 col) pasha pashi
-      */}
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
-        {/* Bam pashe: contact methods */}
+        {/* Left: contact methods */}
         <div className="space-y-8 lg:col-span-5">
           <div className="space-y-6">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-slate-900 dark:text-white tracking-tight">
@@ -98,7 +118,7 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Dan pashe: form (lg+ e pasha pashi, choto screen e niche break hobe) */}
+        {/* Right: form */}
         <div className="lg:col-span-7 min-w-0">
           <motion.form
             onSubmit={handleSubmit}
@@ -108,66 +128,87 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="h-full rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/80 backdrop-blur-sm p-6 md:p-8 shadow-sm"
           >
-            {sent ? (
-              <div className="flex items-start gap-3 p-4 rounded-xl border border-teal-500/20 bg-teal-50/60 dark:bg-teal-900/10">
-                <Mail
+            {sent && (
+              <div
+                role="status"
+                className="flex items-start gap-3 p-4 mb-6 rounded-xl border border-teal-500/20 bg-teal-50/60 dark:bg-teal-900/10"
+              >
+                <CheckCircle2
                   className="h-5 w-5 text-teal-600 dark:text-teal-400 shrink-0 mt-0.5"
                   aria-hidden="true"
                 />
                 <div>
                   <h3 className="font-bold text-slate-900 dark:text-white">
-                    Email client opened
+                    Message sent!
                   </h3>
                   <p className="text-sm text-slate-600 dark:text-slate-400 mt-1">
-                    Your default mail application should open with a draft
-                    addressed to {CONTACT.email.value}. Send it when ready.
+                    Thank you for reaching out. I'll get back to you soon.
                   </p>
                 </div>
               </div>
-            ) : (
-              <>
-                <div className="grid md:grid-cols-2 gap-4 mb-6">
-                  <Field
-                    id="name"
-                    label="Full Name"
-                    placeholder="John Doe"
-                    required
-                    disabled={submitting}
-                  />
-                  <Field
-                    id="email"
-                    label="Email Address"
-                    type="email"
-                    placeholder="you@example.com"
-                    required
-                    disabled={submitting}
-                  />
-                </div>
-                <Field
-                  id="message"
-                  label="Message"
-                  as="textarea"
-                  rows={4}
-                  placeholder="Tell me about your project..."
-                  required
-                  disabled={submitting}
-                />
-                <button
-                  type="submit"
-                  disabled={submitting}
-                  className="w-full md:w-auto px-6 py-3 rounded-xl bg-gradient-to-br from-teal-500 to-indigo-600 text-white font-semibold text-sm hover:from-teal-600 hover:to-indigo-700 shadow-lg shadow-teal-500/25 transition-all disabled:opacity-70 disabled:cursor-not-allowed focus-visible:ring-2 focus-visible:ring-teal-500"
-                >
-                  {submitting ? 'Opening email…' : 'Send via Email'}
-                </button>
-                <p className="mt-4 text-xs text-slate-500 dark:text-slate-500">
-                  No backend — opens your default email client (
-                  <code className="text-slate-700 dark:text-slate-400">
-                    mailto
-                  </code>
-                  ).
-                </p>
-              </>
             )}
+
+            {error && (
+              <div
+                role="alert"
+                className="flex items-start gap-3 p-4 mb-6 rounded-xl border border-red-500/20 bg-red-50/60 dark:bg-red-900/10"
+              >
+                <AlertCircle
+                  className="h-5 w-5 text-red-600 dark:text-red-400 shrink-0 mt-0.5"
+                  aria-hidden="true"
+                />
+                <p className="text-sm text-red-700 dark:text-red-300">
+                  {error}
+                </p>
+              </div>
+            )}
+
+            {/* Honeypot: real user dekhbe na */}
+            <input
+              type="text"
+              name="website"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              className="hidden"
+            />
+
+            <div className="grid md:grid-cols-2 gap-4 mb-6">
+              <Field
+                id="name"
+                label="Full Name"
+                placeholder="John Doe"
+                required
+                disabled={submitting}
+              />
+              <Field
+                id="email"
+                label="Email Address"
+                type="email"
+                placeholder="you@example.com"
+                required
+                disabled={submitting}
+              />
+            </div>
+            <Field
+              id="message"
+              label="Message"
+              as="textarea"
+              rows={4}
+              placeholder="Tell me about your project..."
+              required
+              disabled={submitting}
+            />
+            <button
+              type="submit"
+              disabled={submitting}
+              className="w-full mt-5 md:w-auto px-6 py-3 rounded-xl bg-gradient-to-br from-teal-500 to-indigo-600 text-white font-semibold text-sm hover:from-teal-600 hover:to-indigo-700 shadow-lg shadow-teal-500/25 transition-all disabled:opacity-70 disabled:cursor-not-allowed focus-visible:ring-2 focus-visible:ring-teal-500"
+            >
+              {submitting ? 'Sending…' : 'Send Message'}
+            </button>
+            <p className="mt-4 text-xs text-slate-500 dark:text-slate-500">
+              Your message goes straight to my inbox. No email app needed.
+            </p>
           </motion.form>
         </div>
       </div>

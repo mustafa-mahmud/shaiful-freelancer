@@ -1,5 +1,5 @@
-import { Phone, Linkedin, Facebook, Briefcase, Globe } from "lucide-react";
-import { FOOTER } from "../data/portfolio";
+import { Phone, Linkedin, Facebook, Briefcase, Globe } from 'lucide-react';
+import { FOOTER } from '../data/portfolio';
 
 const ICONS = {
   Phone,
@@ -40,7 +40,7 @@ export default function Footer() {
           </div>
         </div>
         <p className="mt-6 md:mt-0 text-xs text-slate-400 dark:text-slate-500 text-center md:text-right">
-          Built with React, Tailwind CSS &amp; Framer Motion.
+          {/* Built with React, Tailwind CSS &amp; Framer Motion. */}
         </p>
       </div>
     </footer>
