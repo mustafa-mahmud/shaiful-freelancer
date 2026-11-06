@@ -1,11 +1,9 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { useTheme } from '../hooks/useTheme';
 import ThemeToggle from './ThemeToggle';
 import { Menu, X, Phone } from 'lucide-react';
 import { NAV, CONTACT } from '../data/portfolio';
 
 export default function Navbar({ activeId, setActiveId }) {
-  const { dark, toggleTheme } = useTheme();
   const [open, setOpen] = useState(false);
   const navRef = useRef(null);
 
@@ -78,7 +76,6 @@ export default function Navbar({ activeId, setActiveId }) {
                 </a>
               ))}
               <div className="flex items-center gap-3">
-                <ThemeToggle />
                 <a
                   href={CONTACT.whatsapp.href}
                   target="_blank"
@@ -136,15 +133,6 @@ export default function Navbar({ activeId, setActiveId }) {
                   <Phone className="h-4 w-4 shrink-0" aria-hidden="true" />
                   WhatsApp
                 </a>
-                <button
-                  onClick={toggleTheme}
-                  className="block w-full text-left px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
-                  aria-label={
-                    dark ? 'Switch to light mode' : 'Switch to dark mode'
-                  }
-                >
-                  {dark ? 'Light mode' : 'Dark mode'}
-                </button>
               </div>
             </div>
           </div>
