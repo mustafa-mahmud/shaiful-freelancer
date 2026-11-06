@@ -42,28 +42,48 @@ export default function Hero() {
       id="hero"
       className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32"
     >
+      {/* Custom keyframes: ring ghora + gradient shift (Tailwind config chara-i) */}
+      <style>{`
+        @keyframes heroSpin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        @keyframes heroGradientShift {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+      `}</style>
+
       {/* 12-col grid: avatar 5 col (kompact), text 7 col */}
       <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
         {/* Avatar + Badges: Mobile e upore-center, Desktop e bam pashe center */}
         <div className="order-1 lg:order-1 lg:col-span-5">
-          {/* Sob screen e content center e — tai pashe khali jaiga symmetric lage */}
+          {/* Sob screen e content center e */}
           <div className="flex justify-center">
             <div className="flex flex-col items-center gap-6 md:gap-10">
               <div className="relative inline-block">
-                {/* Glow bar: avatar er cheye only 10px boro + rounded-full */}
+                {/* Animated gradient glow: halka halka color change hobe
+                    (teal -> indigo -> purple -> pink -> amber -> teal),
+                    choto + boro sob browser e */}
                 <div
                   aria-hidden="true"
-                  className="pointer-events-none absolute -inset-[10px] rounded-full bg-gradient-to-r from-teal-500 to-indigo-600 opacity-30 blur animate-[pulse_4s_cubic-bezier(0.4,0,0.6,1)_infinite]"
+                  className="pointer-events-none absolute -inset-[10px] rounded-full opacity-30 blur animate-[heroGradientShift_14s_ease-in-out_infinite]"
+                  style={{
+                    background:
+                      'linear-gradient(120deg, #14b8a6, #6366f1, #a855f7, #ec4899, #f59e0b, #14b8a6)',
+                    backgroundSize: '300% 300%',
+                  }}
                 ></div>
 
-                {/* Desktop e extra decoration: slowly ghora dashed ring —
-                    khali space ta ke designed feel dey */}
+                {/* Ghurnayan dashed ring: ekhon MOBILE + DESKTOP duitatei
+                    (mobile e -inset-6, desktop e -inset-8) */}
                 <div
                   aria-hidden="true"
-                  className="pointer-events-none absolute -inset-8 rounded-full border-2 border-dashed border-teal-500/25 dark:border-teal-400/20 animate-[spin_30s_linear_infinite] hidden lg:block"
+                  className="pointer-events-none absolute -inset-6 lg:-inset-8 rounded-full border-2 border-dashed border-teal-500/25 dark:border-teal-400/20 animate-[heroSpin_30s_linear_infinite]"
                 ></div>
 
-                {/* Mobile: 110px, Desktop: 200px — space er sathe balance */}
+                {/* Mobile: 110px, Desktop: 200px */}
                 <div className="lg:hidden">
                   <Avatar size={110} className="relative" />
                 </div>
