@@ -1,68 +1,81 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Mohammad Shaiful Alam — Freelance Portfolio
 
-## Available Scripts
+Modern, polished, fully responsive single-page portfolio built with **React (Vite)**, **Tailwind CSS**, **Framer Motion**, and **lucide-react**.
 
-In the project directory, you can run:
+## Tech stack
 
-### `npm start`
+- Vite + React 18
+- Tailwind CSS (dark/light mode, `dark` class strategy)
+- Framer Motion (scroll reveal, hover lifts, count-up stats, typewriter)
+- lucide-react (icons)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Folder structure
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+```
+src/
+  main.jsx              # Entry point (wraps App in ThemeProvider)
+  App.jsx               # Page layout, scroll spy, section orchestration
+  index.css             # Tailwind utilities + base styles
+  data/portfolio.js     # All text, links, lists (single source of truth)
+  hooks/
+    useTheme.js         # Dark mode state (localStorage + prefers-color-scheme)
+    useCountUp.js       # Animated count-up on scroll
+  components/
+    Navbar.jsx          # Sticky nav, hamburger menu, active-section highlight
+    ThemeToggle.jsx     # Dark/light mode toggle
+    Hero.jsx            # Hero, typewriter roles, avatar, CTAs, badges
+    Avatar.jsx          # Placeholder avatar (DiceBear), swappable via src prop
+    Stats.jsx           # Animated count-up statistics
+    About.jsx           # Professional summary + objective
+    Services.jsx        # 15 service cards with category filter + tag expander
+    Tools.jsx           # Platforms & tools marquee
+    Strengths.jsx       # Professional strengths cards
+    Experience.jsx      # Vertical timeline with profile links
+    Education.jsx       # Compact education cards
+    Contact.jsx         # Contact cards + mailto contact form
+    Footer.jsx          # Copyright + social icons
+    WhatsAppFab.jsx     # Floating WhatsApp button
+```
 
-### `npm test`
+## Getting started
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+# Install dependencies
+npm install
 
-### `npm run build`
+# Run development server
+npm run dev
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Build for production
+npm run build
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+# Preview production build
+npm run preview
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Lint
+npm run lint
+```
 
-### `npm run eject`
+## How to edit content
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+All copy, links, and lists live in `src/data/portfolio.js`. Edit that file and the
+components update automatically — no component changes needed.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## How to swap the avatar
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`src/components/Avatar.jsx` accepts a `src` prop. By default it uses a DiceBear
+illustrated avatar. To use a real photo:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```jsx
+<Avatar src="/images/photo.jpg" alt="Mohammad Shaiful Alam" />
+```
 
-## Learn More
+Place your image in `public/` and reference it, or import it and pass it as `src`.
+The component falls back to an "MS" initials badge if the image fails to load.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Notes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- The contact form opens a `mailto:` link (no backend).
+- Dark mode is persisted in `localStorage` and respects `prefers-color-scheme`.
+- Animations respect `prefers-reduced-motion`.
+- Target: Lighthouse 90+ on all categories (no heavy images, lazy avatar, system fonts preloaded).
