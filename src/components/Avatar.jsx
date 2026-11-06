@@ -12,40 +12,39 @@ export default function Avatar({
 
   return (
     <span
-      className={`relative inline-block overflow-hidden rounded-full ${className}`}
+      className={`relative inline-block shrink-0 ${className}`}
+      style={{ width: size, height: size }}
     >
-      {!fallback && (
-        <img
-          src={imageSrc}
-          alt={alt}
-          width={size}
-          height={size}
-          className={`rounded-full block shadow-lg ${size >= 80 ? 'shadow-xl' : ''} object-cover`}
-          loading="eager"
-          onError={() => setFallback(true)}
-        />
-      )}
-      {fallback && (
-        <div
-          className="flex h-full w-full items-center justify-center rounded-full shadow-lg"
-          style={{
-            width: size,
-            height: size,
-            background: 'linear-gradient(135deg, #0ea5e9 0%, #14b8a6 100%)',
-          }}
-        >
-          <span className="text-white font-bold font-heading">
-            {alt
-              .split(' ')
-              .map((w) => w[0])
-              .join('')
-              .toUpperCase()}
+      <span className="block h-full w-full overflow-hidden rounded-full shadow-lg">
+        {!fallback ? (
+          <img
+            src={imageSrc}
+            alt={alt}
+            className="block h-full w-full rounded-full object-cover object-top"
+            loading="eager"
+            onError={() => setFallback(true)}
+          />
+        ) : (
+          <span
+            className="flex h-full w-full items-center justify-center rounded-full"
+            style={{
+              background: 'linear-gradient(135deg, #0ea5e9 0%, #14b8a6 100%)',
+            }}
+          >
+            <span className="font-heading font-bold text-white">
+              {alt
+                .split(' ')
+                .map((w) => w[0])
+                .join('')
+                .toUpperCase()}
+            </span>
           </span>
-        </div>
-      )}
-      <div className="absolute bottom-0 right-0 z-10 flex h-6 w-6 items-center justify-center rounded-full border border-white dark:border-slate-900 bg-white dark:bg-slate-900 shadow-sm text-[10px] font-bold text-navy-900 dark:text-white">
+        )}
+      </span>
+
+      <span className="absolute bottom-0 right-0 z-10 flex h-6 w-6 items-center justify-center rounded-full border border-white bg-white text-[10px] font-bold text-navy-900 shadow-sm dark:border-slate-900 dark:bg-slate-900 dark:text-white">
         SF
-      </div>
+      </span>
     </span>
   );
 }
