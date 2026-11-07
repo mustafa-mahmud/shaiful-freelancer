@@ -69,20 +69,20 @@ export const CONTACT = {
 export const NAV = [
   { label: 'Home', href: '#hero' },
   { label: 'Services', href: '#services' },
-  { label: 'Snippet', id: 'snippet', href: '#snippet' },
+  { label: 'Portfolio', id: 'portfolio', href: '#portfolio' },
   { label: 'Experience', href: '#experience' },
   { label: 'Education', href: '#education' },
   { label: 'Contact', href: '#contact' },
 ];
 
-export const snippetSection = {
+export const portfolioSection = {
   eyebrow: 'Work Samples',
-  title: 'Snippet Work',
+  title: 'Portfolio Work',
   subtitle:
     'A few samples of my work. Each link opens the sample in a new tab.',
 };
 
-export const snippets = [
+export const portfolios = [
   {
     id: 1,
     title: 'Lead Generation',
