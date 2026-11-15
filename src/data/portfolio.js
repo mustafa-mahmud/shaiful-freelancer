@@ -73,6 +73,11 @@ export const NAV = [
   { label: 'Experience', href: '#experience' },
   { label: 'Education', href: '#education' },
   { label: 'Contact', href: '#contact' },
+  {
+    label: 'Business Support',
+    id: 'business-support',
+    href: '#business-support',
+  },
 ];
 
 export const portfolioSection = {
@@ -148,7 +153,7 @@ export const portfolios = [
     id: 11,
     title: 'Houzz Entry',
     category: 'E-commerce',
-    url: 'https://docs.google.com/document/d/13Dix44aoehEkudJGjObJYa95zJ3aH2hDtp4IIuGyJ30/edit',
+    url: 'https://docs.google.com/document/d/13Dix44aoehEkudJGjObJYa95jJ3aH2hDtp4IIuGyJ30/edit',
   },
   {
     id: 12,
@@ -550,4 +555,110 @@ export const FOOTER = {
       icon: 'Globe',
     },
   ],
+};
+
+/* ------------------------------------------------------------------ */
+/* BUSINESS SUPPORT (New)                                              */
+/* ------------------------------------------------------------------ */
+
+export const BUSINESS_SUPPORT = {
+  navLabel: 'Business Support',
+  sectionId: 'business-support',
+  navTagline: 'Garments & Seafood Sourcing Agent',
+  eyebrow: 'Business Support',
+  title: 'My Business Support',
+  intro:
+    'As an Independent Garments & Seafood Sourcing Agent based in Bangladesh, I provide end-to-end sourcing, market research, buyer communication, supplier coordination, and export support to international buyers.',
+  categories: [
+    {
+      id: 'garments',
+      title: 'Garments & Apparel Sourcing',
+      icon: 'Shirt',
+      items: [
+        'Custom Garments Manufacturing & Sourcing',
+        'T-shirts, Polo Shirts, Shirts, Trousers, Denim, Jackets and Knitwear Winter Wear',
+        'Factory and Manufacturer Research',
+        'Fabric, Material and Product Sourcing',
+        'Price Quotation and Cost Comparison',
+        'Sample Development and Approval Coordination',
+        'Production Follow-up and Quality Inspection Coordination',
+        'Garment Finishing: Trimming, Ironing, Folding, Labeling and Final Quality Checking',
+        'Garment Packaging: Individual Poly Bagging, Carton Packing, Size Assortment and Export Packing',
+        'Garment Shipment: Export Documentation, Cargo Booking, Freight Coordination and Shipment Tracking',
+        'Bulk Order Management and Export Support',
+      ],
+    },
+    {
+      id: 'seafood',
+      title: 'Seafood Sourcing & Export',
+      icon: 'Fish',
+      items: [
+        'Fresh and Frozen Seafood Sourcing',
+        'Shrimp, Fish, Crab and Other Seafood Products',
+        'Seafood Supplier and Exporter Research',
+        'Product Quality, Size, Grade and Price Comparison',
+        'Sample Collection and Quality Verification Coordination',
+        'Seafood Processing & Finishing: Cleaning, Grading, Sorting, Freezing and Quality Control',
+        'Seafood Packaging: Food-Grade Packaging, Vacuum Packing, Frozen Carton Packing and Labeling',
+        'Seafood Shipment: Cold Chain Coordination, Temperature-Controlled Transportation, Export Documentation and Shipment Tracking',
+        'Export Compliance and Shipment Coordination',
+      ],
+    },
+    {
+      id: 'market-research',
+      title: 'Market Research & Business Development',
+      icon: 'TrendingUp',
+      items: [
+        'Comprehensive Garments & Seafood Market Research',
+        'International Market Demand and Product Research',
+        'Supplier, Manufacturer and Competitor Research',
+        'Product Quality, Market Price and Cost Analysis',
+        'Buyer and Business Opportunity Research',
+        'Target Market and Export Opportunity Analysis',
+      ],
+    },
+    {
+      id: 'buyer-support',
+      title: 'International Buyer & Business Support',
+      icon: 'Handshake',
+      items: [
+        'International Client Communication',
+        'B2B Buyer and Supplier Research',
+        'Business Appointment Setting',
+        'Buyer-Supplier Meeting Coordination',
+        'Digital Marketing and Business Promotion',
+        'Web Research, Data Collection and Verification',
+        'Order Negotiation and Follow-up',
+        'End-to-End Export Process Coordination',
+      ],
+    },
+  ],
+  cta: {
+    title: "Let's Work Together!",
+    paragraphs: [
+      'You are welcome to discuss your business requirements and consider hiring me as your Independent Garments & Seafood Sourcing Agent under a project-based or contractual agreement.',
+      'I can arrange quality-focused product samples for your evaluation. Once the samples meet your required specifications and quality standards, you can proceed with a final sourcing and supply agreement with me and the selected garment manufacturers or seafood suppliers.',
+    ],
+  },
+  resources: [
+    {
+      id: 'garments-sample',
+      label: 'Garments Sample',
+      url: 'https://docs.google.com/document/d/1_EMMYMHlNUoOU5-Nmj2THFmkyTwEXSGCRnHhjypXRg4/edit',
+      icon: 'FileText',
+    },
+    {
+      id: 'seafood-sample',
+      label: 'Seafood Sample',
+      url: 'https://docs.google.com/document/d/1Va_sdEX8FczTxxCOI6yrF3CPnfbQ_eLdXGtLFaO95uI/edit',
+      icon: 'FileText',
+    },
+    {
+      id: 'online-store',
+      label: 'I Have an Online Store. Please Visit!',
+      url: 'https://docs.google.com/document/d/1v1dXYA2apvj_KqrVeZxB7S44BKZvQHfsUeoK3fB2Gyk/edit',
+      icon: 'Store',
+    },
+  ],
+  resourcesNote: 'Each link opens the sample in a new tab.',
 };

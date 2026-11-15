@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Stats from './components/Stats';
 import About from './components/About';
+import BusinessSupport from './components/BusinessSupport';
 import Services from './components/Services';
 import Portfolio from './components/Portfolio';
 import Tools from './components/Tools';
@@ -17,6 +18,7 @@ const SECTIONS = [
   'hero',
   'stats',
   'about',
+  'business-support',
   'services',
   'portfolio',
   'tools',
@@ -57,6 +59,7 @@ export default function App() {
         <Hero />
         <Stats />
         <About />
+        <BusinessSupport />
         <Services />
         <Portfolio />
         <Tools />

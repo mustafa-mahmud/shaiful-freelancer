@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import ThemeToggle from './ThemeToggle';
 import { Menu, X, Phone } from 'lucide-react';
-import { NAV, CONTACT } from '../data/portfolio';
+import { NAV, CONTACT, BUSINESS_SUPPORT } from '../data/portfolio';
 
 export default function Navbar({ activeId, setActiveId }) {
   const [open, setOpen] = useState(false);
@@ -55,26 +55,63 @@ export default function Navbar({ activeId, setActiveId }) {
             </div>
 
             <div className="hidden md:flex items-center gap-8">
-              {NAV.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollTo(item.href);
-                  }}
-                  className={`text-sm font-medium transition-colors ${
-                    activeId === item.href.replace('#', '')
-                      ? 'text-teal-600 dark:text-teal-400'
-                      : 'text-slate-600 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400'
-                  }`}
-                  aria-current={
-                    activeId === item.href.replace('#', '') ? 'page' : undefined
-                  }
-                >
-                  {item.label}
-                </a>
-              ))}
+              {NAV.map((item) => {
+                const isBusinessSupport = item.id === 'business-support';
+                return (
+                  <>
+                    {isBusinessSupport ? (
+                      <div className="relative group">
+                        <a
+                          href={item.href}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            scrollTo(item.href);
+                          }}
+                          className={`text-sm font-medium transition-colors ${
+                            activeId === item.href.replace('#', '')
+                              ? 'text-teal-600 dark:text-teal-400'
+                              : 'text-slate-600 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400'
+                          }`}
+                          aria-current={
+                            activeId === item.href.replace('#', '')
+                              ? 'page'
+                              : undefined
+                          }
+                        >
+                          {item.label}
+                        </a>
+                        <div
+                          className="absolute top-full left-0 mt-2 z-50 whitespace-nowrap opacity-0 invisible pointer-events-none transition-all duration-200 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto group-focus-within:opacity-100 group-focus-within:visible group-focus-within:pointer-events-auto"
+                        >
+                          <div className="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-lg px-3 py-2 text-sm text-slate-600 dark:text-slate-400">
+                            {BUSINESS_SUPPORT.navTagline}
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      <a
+                        href={item.href}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          scrollTo(item.href);
+                        }}
+                        className={`text-sm font-medium transition-colors ${
+                          activeId === item.href.replace('#', '')
+                            ? 'text-teal-600 dark:text-teal-400'
+                            : 'text-slate-600 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400'
+                        }`}
+                        aria-current={
+                          activeId === item.href.replace('#', '')
+                            ? 'page'
+                            : undefined
+                        }
+                      >
+                        {item.label}
+                      </a>
+                    )}
+                  </>
+                );
+              })}
               <div className="flex items-center gap-3">
                 <a
                   href={CONTACT.whatsapp.href}
