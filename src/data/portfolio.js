@@ -662,3 +662,10 @@ export const BUSINESS_SUPPORT = {
   ],
   resourcesNote: 'Each link opens the sample in a new tab.',
 };
+
+export const CV = {
+  label: 'CV',
+  tooltip: 'Curriculum Vitae',
+  href: 'https://docs.google.com/document/d/1Qe_e0bpSuIqUd8pi9RCRzzdi1jx4rHqmKUG3cxv3qMk/edit',
+  icon: 'FileText',
+};
