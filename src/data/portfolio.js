@@ -150,34 +150,46 @@ export const portfolios = [
   },
   // TODO: confirm with client, WordPress and Property Listing share the same URL
   {
-    id: 9,
+    id: 11,
     title: 'WordPress Entry',
     category: 'E-commerce',
     url: 'https://docs.google.com/document/d/1B7tu1UCQPTOOrtKqLIX_t_r2ow0OVjb6_-6TE02MthY/edit',
   },
   {
-    id: 10,
+    id: 12,
     title: 'X-Cart Entry',
     category: 'E-commerce',
     url: 'https://docs.google.com/document/d/13tErErUuwg7icD4w-obOHh4-ZFe5zcYaVuNlGUPz9Xc/edit',
   },
   {
-    id: 11,
+    id: 13,
     title: 'Houzz Entry',
     category: 'E-commerce',
     url: 'https://docs.google.com/document/d/13Dix44aoehEkudJGjObJYa95jJ3aH2hDtp4IIuGyJ30/edit',
   },
   {
-    id: 12,
+    id: 14,
     title: 'Craigslist Entry',
     category: 'E-commerce',
     url: 'https://docs.google.com/document/d/1wxu1aUnlOmTVW8yIDUaVPSAecU4pnypQKv5XkGJ_LCg/edit',
   },
   {
-    id: 13,
+    id: 15,
     title: 'Property Listing',
     category: 'E-commerce',
     url: 'https://docs.google.com/document/d/1B7tu1UCQPTOOrtKqLIX_t_r2ow0OVjb6_-6TE02MthY/edit',
+  },
+  {
+    id: 16,
+    title: 'Cold Calling and Appointment',
+    category: 'Admin Support',
+    url: 'https://docs.google.com/document/d/1CsfuzqaVWkwtqXEBPuYsm1onP4uFZ20VJNrSbyMdbgY/edit',
+  },
+  {
+    id: 17,
+    title: 'CRM Data Entry ',
+    category: 'Admin Support',
+    url: 'https://docs.google.com/document/d/1BuQOSV5Yy9qbv2kwrJNxs6szEHAQFvOh_7I0psJDGx4/edit',
   },
 ];
 
@@ -224,6 +236,7 @@ const CATEGORY_LABELS = {
   marketing: 'Marketing & SEO',
   creative: 'Creative & AI',
   ecommerce: 'E-commerce',
+  support: 'Admin Support',
 };
 
 export const SERVICES = [
