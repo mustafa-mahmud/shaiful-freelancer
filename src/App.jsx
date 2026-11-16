@@ -18,12 +18,12 @@ const SECTIONS = [
   'hero',
   'stats',
   'about',
-  'business-support',
   'services',
   'portfolio',
   'tools',
   'strengths',
   'experience',
+  'business-support',
   'education',
   'contact',
 ];
@@ -59,12 +59,12 @@ export default function App() {
         <Hero />
         <Stats />
         <About />
-        <BusinessSupport />
         <Services />
         <Portfolio />
         <Tools />
         <Strengths />
         <Experience />
+        <BusinessSupport />
         <Education />
         <Contact />
       </main>
